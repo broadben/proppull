@@ -1,74 +1,63 @@
-// ── FAQ accordion ────────────────────────────────────────────────────────────
+// ── FAQ accordion toggle ─────────────────────────────────────────────────────
 
-document.querySelectorAll('.faq-q').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const item = btn.closest('.faq-item');
-    const isOpen = item.classList.contains('open');
+document.querySelectorAll('.faq-toggle').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var item = btn.closest('.faq-item');
+    var content = item.querySelector('.faq-content');
+    var icon = item.querySelector('.faq-icon');
+    var isOpen = !content.classList.contains('hidden');
 
-    // Close all
-    document.querySelectorAll('.faq-item.open').forEach((el) => el.classList.remove('open'));
+    // Close all other items
+    document.querySelectorAll('.faq-item').forEach(function (other) {
+      if (other !== item) {
+        other.querySelector('.faq-content').classList.add('hidden');
+        other.querySelector('.faq-icon').textContent = '+';
+        other.querySelector('.faq-icon').style.transform = '';
+        other.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
+      }
+    });
 
-    // Toggle clicked
-    if (!isOpen) item.classList.add('open');
-    btn.setAttribute('aria-expanded', String(!isOpen));
+    // Toggle clicked item
+    if (isOpen) {
+      content.classList.add('hidden');
+      icon.textContent = '+';
+      icon.style.transform = '';
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      content.classList.remove('hidden');
+      icon.textContent = '\u2212'; // minus sign
+      icon.style.transform = '';
+      btn.setAttribute('aria-expanded', 'true');
+    }
   });
 });
 
-// ── Smooth-reveal on scroll ──────────────────────────────────────────────────
+// ── Smooth scroll for anchor links ──────────────────────────────────────────
 
-const revealEls = document.querySelectorAll(
-  '.pain-card, .feature-card, .step, .audience-card, .pricing-card, .faq-item'
-);
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-
-revealEls.forEach((el) => {
-  el.classList.add('reveal-ready');
-  observer.observe(el);
-});
-
-// ── Nav active link ──────────────────────────────────────────────────────────
-
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-const navObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        navLinks.forEach((link) => {
-          link.classList.toggle(
-            'active',
-            link.getAttribute('href') === `#${entry.target.id}`
-          );
-        });
-      }
-    });
-  },
-  { rootMargin: '-40% 0px -55% 0px' }
-);
-
-sections.forEach((s) => navObserver.observe(s));
-
-// ── CTA placeholder alert ────────────────────────────────────────────────────
-
-['cta-free', 'cta-pro', 'cta-bottom'].forEach((id) => {
-  const el = document.getElementById(id);
-  if (el) {
-    el.addEventListener('click', (e) => {
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    var href = link.getAttribute('href');
+    if (href === '#') return; // skip placeholder links
+    var target = document.querySelector(href);
+    if (target) {
       e.preventDefault();
-      // Replace with real Chrome Web Store URL once published
-      alert('Coming soon! The extension is in review on the Chrome Web Store.\nEnter your email at hello@proppull.com to be notified at launch.');
-    });
-  }
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Update URL without jumping
+      history.pushState(null, '', href);
+    }
+  });
 });
+
+// ── Nav shadow on scroll ────────────────────────────────────────────────────
+
+var nav = document.getElementById('main-nav');
+
+if (nav) {
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 10) {
+      nav.classList.add('shadow-sm');
+    } else {
+      nav.classList.remove('shadow-sm');
+    }
+  }, { passive: true });
+}
