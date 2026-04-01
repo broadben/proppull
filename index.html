@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PropPull — Pull Property Data, Auto-Fill ZipForms</title>
+  <meta name="description" content="Enter an address. Get 50+ property fields auto-filled from tax records, MLS, and FEMA. Auto-fill ZipForms in one click. Free Chrome extension for real estate agents." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="#">
+      <span class="logo-icon">🏠</span>
+      <span>PropPull</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <a href="#install" class="btn btn-primary btn-sm">Install Free</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container text-center">
+    <div class="badge">Chrome Extension · Real Estate · Free</div>
+    <h1>Stop retyping property data.<br><span class="accent">Pull, fill, export.</span></h1>
+    <p class="hero-sub">
+      Enter an address. PropPull pulls 50+ fields from tax records, MLS listings, and FEMA flood data
+      — then auto-fills your ZipForms RPA in one click. No more copy-paste across 5 tabs.
+    </p>
+    <div class="hero-ctas">
+      <a href="#install" class="btn btn-primary btn-lg">Install Chrome Extension</a>
+      <a href="#how-it-works" class="btn btn-outline btn-lg">See how it works</a>
+    </div>
+    <p class="hero-note">Free to use · No account required · 50+ fields per lookup</p>
+  </div>
+</section>
+
+<!-- Data sources -->
+<section class="data-strip">
+  <div class="container text-center">
+    <p class="strip-label">Data pulled from</p>
+    <div class="strip-sources">
+      <span>RentCast (140M+ properties)</span>
+      <span class="dot">&middot;</span>
+      <span>FEMA Flood Maps</span>
+      <span class="dot">&middot;</span>
+      <span>MLS Listings</span>
+      <span class="dot">&middot;</span>
+      <span>County Assessors</span>
+    </div>
+  </div>
+</section>
+
+<!-- Problem -->
+<section class="section" id="problem">
+  <div class="container">
+    <p class="section-label">The old way</p>
+    <h2>You're losing 30 minutes on every single deal.</h2>
+    <p class="section-sub">Same address, same APN, same tax info — typed into 5 different forms across every transaction.</p>
+    <div class="grid grid-4">
+      <div class="card card-problem">
+        <div class="card-num">1</div>
+        <h3>County assessor site</h3>
+        <p>Search the address. Copy APN, taxes, assessed value. Paste somewhere.</p>
+      </div>
+      <div class="card card-problem">
+        <div class="card-num">2</div>
+        <h3>MLS / listing portal</h3>
+        <p>Find the listing. Copy agent info, price, DOM. Paste into another form.</p>
+      </div>
+      <div class="card card-problem">
+        <div class="card-num">3</div>
+        <h3>Your spreadsheet</h3>
+        <p>Re-format everything. Realize you copied the wrong lot size. Go back.</p>
+      </div>
+      <div class="card card-problem">
+        <div class="card-num">4</div>
+        <h3>ZipForms</h3>
+        <p>Re-type the same address and price you just looked up. Again.</p>
+      </div>
+    </div>
+    <div class="callout">PropPull does all of this with one address entry — and auto-fills ZipForms for you.</div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section section-alt" id="features">
+  <div class="container">
+    <p class="section-label">Features</p>
+    <h2>Everything auto-filled.</h2>
+    <p class="section-sub">Enter an address once. Every field you need for an RPA, disclosure, or deal analysis is already filled in.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>50+ Fields Per Lookup</h3>
+        <p>APN, legal description, beds, baths, sqft, lot size, year built, taxes, assessed values, HOA, sale history, zoning, owner info, and more.</p>
+      </div>
+      <div class="card">
+        <h3>ZipForms Auto-Fill</h3>
+        <p>Open your RPA in ZipForms, click "Fill ZipForms" in the sidebar — every matched field is instantly populated. No more field-by-field pasting.</p>
+      </div>
+      <div class="card">
+        <h3>FEMA Flood Zone</h3>
+        <p>Automatic flood zone designation (A, AE, X, VE), subtype, and whether flood insurance is required. Free and unlimited.</p>
+      </div>
+      <div class="card">
+        <h3>Agent Profile</h3>
+        <p>Save your name, license, brokerage, and preferred escrow once. It auto-fills buyer's agent fields on every transaction.</p>
+      </div>
+      <div class="card">
+        <h3>Search History</h3>
+        <p>Every address you pull is saved. Click any previous lookup to reload it instantly and auto-fill from that property.</p>
+      </div>
+      <div class="card">
+        <h3>Listing Agent & Broker</h3>
+        <p>If the property is actively listed, PropPull pulls the listing agent name, phone, email, brokerage, MLS number, and days on market.</p>
+      </div>
+      <div class="card">
+        <h3>Full RPA Fields</h3>
+        <p>Every section of a Residential Purchase Agreement — property ID, financial terms, taxes, hazards, parties, agents, contingencies.</p>
+      </div>
+      <div class="card">
+        <h3>Editable Fields</h3>
+        <p>Buyer info, earnest money, down payment, closing date, and contingencies are editable right in the sidebar. Changes persist per property.</p>
+      </div>
+      <div class="card">
+        <h3>Copy to Clipboard</h3>
+        <p>One click copies all fields as formatted text. Paste into any platform — ZipForms, Dotloop, SkySlope, Excel, or email.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <p class="section-label">How it works</p>
+    <h2>Three steps. That's it.</h2>
+    <div class="grid grid-3 steps">
+      <div class="step text-center">
+        <div class="step-num">1</div>
+        <h3>Enter an address</h3>
+        <p>Open the PropPull sidebar, type any US property address. Data is pulled from RentCast, MLS, and FEMA in parallel.</p>
+      </div>
+      <div class="step text-center">
+        <div class="step-num">2</div>
+        <h3>Review & edit fields</h3>
+        <p>50+ fields are auto-filled. Add buyer info, earnest money, closing date. Your agent profile fills the buyer side automatically.</p>
+      </div>
+      <div class="step text-center">
+        <div class="step-num">3</div>
+        <h3>Fill ZipForms</h3>
+        <p>Open your RPA in ZipForms Plus and click "Fill ZipForms." Every matched field populates instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who it's for -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-label">Who it's for</p>
+    <h2>Built for people tired of retyping the same data.</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Listing & Buyer's Agents</h3>
+        <p>Pull data, fill RPA fields, auto-fill ZipForms — all from one address. Agent profile saves your info across every deal.</p>
+      </div>
+      <div class="card">
+        <h3>Wholesalers</h3>
+        <p>Analyzing 20+ leads a day? Pull property data, tax records, and owner info in seconds instead of 30 minutes per property.</p>
+      </div>
+      <div class="card">
+        <h3>Fix & Flip Investors</h3>
+        <p>Get every acquisition data point — taxes, assessed values, last sale, estimated value, flood zone — pre-filled for your deal analysis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="section" id="pricing">
+  <div class="container">
+    <p class="section-label">Pricing</p>
+    <h2>Start free. Upgrade when you need more.</h2>
+    <p class="section-sub">No credit card required.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-tier">Free</div>
+        <div class="pricing-price">$0<span>/mo</span></div>
+        <p class="pricing-desc">For agents getting started.</p>
+        <ul>
+          <li>~16 property lookups/month</li>
+          <li>50+ auto-filled fields</li>
+          <li>ZipForms auto-fill</li>
+          <li>Agent profile</li>
+          <li>Search history</li>
+          <li>FEMA flood zone (unlimited)</li>
+          <li>Copy to clipboard</li>
+        </ul>
+        <a href="#install" class="btn btn-outline">Install Free</a>
+      </div>
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier accent">Pro</div>
+        <div class="pricing-price">$29<span>/mo</span></div>
+        <p class="pricing-desc">For active agents and investors.</p>
+        <ul>
+          <li>Unlimited property lookups</li>
+          <li>Everything in Free</li>
+          <li><strong>DocuSign integration</strong></li>
+          <li><strong>Bulk address import (CSV)</strong></li>
+          <li><strong>Priority data updates</strong></li>
+        </ul>
+        <a href="#install" class="btn btn-primary">Get Pro — 7-day free trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Install CTA -->
+<section class="section section-cta" id="install">
+  <div class="container text-center">
+    <h2>Stop retyping. Start closing.</h2>
+    <p>Enter one address. Get every field you need. Auto-fill ZipForms in one click.</p>
+    <a href="https://chrome.google.com/webstore" class="btn btn-white btn-lg" id="install-btn">
+      Add PropPull to Chrome — It's Free
+    </a>
+    <p class="install-note">Works with Chrome, Edge, Brave, and any Chromium browser.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-label">FAQ</p>
+    <h2>Common questions.</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Where does the property data come from?</summary>
+        <p>PropPull uses the RentCast API (140M+ US property records sourced from county assessors and MLS feeds), FEMA's National Flood Hazard Layer for flood zones, and RentCast's listing database for active listing agent and broker info.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How does ZipForms auto-fill work?</summary>
+        <p>PropPull's sidebar runs alongside ZipForms Plus. When you click "Fill ZipForms," the extension finds matching form fields on the page and fills them with your property data. Fields that can't be matched are flagged so you can fill them manually.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How many lookups do I get for free?</summary>
+        <p>The free tier gives you ~16 property lookups per month. FEMA flood zone lookups are unlimited and free.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does my agent profile persist?</summary>
+        <p>Yes. Your name, license, brokerage, and preferred escrow are saved locally in Chrome and auto-fill buyer's agent fields on every new transaction.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if a field is wrong or missing?</summary>
+        <p>Every field is editable in the sidebar. If data is missing from the API, you can fill it in manually. Editable fields have a dashed border.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is my data stored anywhere?</summary>
+        <p>All data is stored locally in your browser. Property lookups and your agent profile never leave your machine. The only external calls are to RentCast and FEMA for data retrieval.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="footer-logo">PropPull</span>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="mailto:hello@proppull.com">Contact</a>
+    </div>
+    <span>&copy; 2026 PropPull</span>
+  </div>
+</footer>
+
+</body>
+</html>
